@@ -1,5 +1,5 @@
 {
-  "name": "epidag",
+  "name": "dag",
   "version": "1.0.0",
   "description": "probabilistic modelling with DAGs",
   "main": "index.js",
@@ -16,8 +16,9 @@
   "module": "index",
   "jsnext:main": "index",
   "scripts": {
-    "pretest": "rd /s dist && mkdir dist && rollup index.js --o dist/epidag.js --f cjs",
-    "test": "tape test/**/*-test.js && eslint index.js src"
+    "pretest": "rd /s /q build && mkdir build && rollup -c",
+    "test": "tape test/**/*-test.js && eslint index.js src",
+    "build": "uglifyjs -b beautify=false build/dag.js -c -m -o build/dag.min.js"
   },
   "devDependencies": {
     "eslint": "^4.19.0",

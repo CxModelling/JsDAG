@@ -1,5 +1,5 @@
 var tape = require("tape"),
-    epidag = require("../dist/epidag");
+    epidag = require("../build/dag");
 
 
 tape("vld validates type and value of a variable", function(test) {
