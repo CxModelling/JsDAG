@@ -22,10 +22,9 @@
   },
   "devDependencies": {
     "eslint": "^4.19.0",
-    "package-preamble": "0.1",
     "rollup": "^0.57.1",
     "tape": "^4.9.0",
-    "uglify-js": "^3.3.16"
+    "uglify-js-es6": "^2.8.9"
   },
   "dependencies": {
     "jStat": "^1.7.1",
