@@ -16,7 +16,7 @@
   "module": "index",
   "jsnext:main": "index",
   "scripts": {
-    "pretest": "rd /s /q build && mkdir build && rollup -c",
+    "pretest": "(if exist build rd /q /s build) && mkdir build && rollup -c",
     "test": "tape test/**/*-test.js && eslint index.js src",
     "build": "uglifyjs -b beautify=false build/dag.js -c -m -o build/dag.min.js"
   },
